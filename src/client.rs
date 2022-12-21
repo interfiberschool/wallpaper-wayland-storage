@@ -32,7 +32,13 @@ impl Client {
 
             let cmd: Vec<&str> = buf.split(" ").collect();
 
-            
+            if cmd.len() < 2 {
+                println!("Invalid command length");
+                break;
+            }
+
+            let cmd_name = cmd[0];
+            let args: Vec<&str> = cmd[1].split(",").collect(); // Array of base64 encoded arguments
         }
     }
 }
