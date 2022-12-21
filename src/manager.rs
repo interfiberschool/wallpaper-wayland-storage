@@ -1,7 +1,7 @@
-pub struct CommandManager {
-    commands: HashMap<String, Box<dyn RapdCommand>>,
+pub struct DaemonCommandManager {
+    commands: HashMap<String, Box<dyn DaemonCommand>>,
 }
 
 pub trait RapdCommand {
-    fn execute(&self, msg: ) -> RapdCommandResponse;
+    fn execute(&self, msg: DaemonCommand);
 }
